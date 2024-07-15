@@ -12,6 +12,15 @@ close.addEventListener("click", () => {
 
 const accordionHeader = document.querySelectorAll(".accordion__header");
 
+
+if (accordionHeader.length > 0) {
+  const firstElement = accordionHeader[0].nextElementSibling;
+  const firstIconElement = accordionHeader[0].children[1].children;
+  firstElement.style.display = "block";
+  firstIconElement[1].style.display = "flex";
+  firstIconElement[0].style.display = "none";
+}
+
 accordionHeader.forEach((element) => {
   element.addEventListener("click", () => {
     const nextElement = element.nextElementSibling;
@@ -27,3 +36,4 @@ accordionHeader.forEach((element) => {
     }
   });
 });
+
