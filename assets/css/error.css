@@ -1,0 +1,106 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  /* Primary Colors */
+  --primary-accent: #1d4ed8;
+  --primary-dark: #153e9c;
+  --primary-light: #3b82f6;
+
+  /* Secondary Colors */
+  --secondary-accent: #f59e0b;
+  --secondary-dark: #b45309;
+  --secondary-light: #fbbf24;
+
+  /* Neutral Colors */
+  --background: #ffffff;
+  --surface: #f3fbfb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+
+  /* Additional Colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+  --shade: #f2f2f2;
+  --dark: #1a1a1a;
+
+  /* Custom Data  */
+  --width: 90%;
+}
+
+@font-face {
+  font-family: font;
+  src: url(fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+  font-family: font;
+  height: 100vh;
+  background: var(--surface);
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 2rem 0;
+}
+
+.icon i {
+  font-size: 5rem;
+  animation: spin 3s linear infinite;
+  color: var(--primary-accent);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Buttons  */
+.btn {
+  padding: 0.4rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+
+  font-weight: 600;
+  font-family: font;
+  background: var(--background);
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  box-shadow: 0 0 10px rgb(0 0 0 /0.01);
+}
+
+.btn:hover {
+  filter: brightness(0.6);
+}
+
+.btn.fill {
+  background: var(--primary-accent);
+  color: var(--background);
+}
