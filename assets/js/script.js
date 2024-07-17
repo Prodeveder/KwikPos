@@ -12,7 +12,6 @@ close.addEventListener("click", () => {
 
 const accordionHeader = document.querySelectorAll(".accordion__header");
 
-
 if (accordionHeader.length > 0) {
   const firstElement = accordionHeader[0].nextElementSibling;
   const firstIconElement = accordionHeader[0].children[1].children;
@@ -37,3 +36,20 @@ accordionHeader.forEach((element) => {
   });
 });
 
+// Pricing Model
+
+const paymentDuration = document.querySelectorAll(".payment"),
+  prices = document.querySelectorAll('.pr')
+
+const clearPayment = () => {
+  paymentDuration.forEach((duration) => {
+    duration.classList.remove("fill");
+  });
+};
+
+paymentDuration.forEach((duration) => {
+  duration.addEventListener("click", () => {
+    clearPayment();
+    duration.classList.add("fill");
+  });
+});
