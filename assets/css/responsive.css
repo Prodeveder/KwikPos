@@ -63,6 +63,26 @@
   .feature__card:last-child {
     grid-column: 2 span;
   }
+
+  /* Contact Grid  */
+  .contact__grid_ {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Contact Card Content Icon */
+  .card__content .icon {
+    padding: 0 0 1rem 0;
+  }
+
+  /* Contact Section  */
+  .contact__section {
+    grid-template-columns: minmax(300px, 1fr);
+    gap: 0;
+  }
+  /* Contact Map  */
+  .contact__map iframe {
+    width: 100%;
+    height: 400px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -70,7 +90,6 @@
   .desktop {
     display: none;
   }
-
 
   /* Menu  */
   .menu,
@@ -134,6 +153,11 @@
   .footer__container {
     grid-template-columns: 1fr;
   }
+
+  /* Sign Up Header  */
+  .sign__up__header {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 650px) {
@@ -155,11 +179,11 @@
   .col_3 {
     grid-template-columns: 1fr;
   }
-    /* Price Card Last Child  */
-    .price__card:last-child {
-      grid-column: 1 span;
-      margin-top: 0px;
-    }
+  /* Price Card Last Child  */
+  .price__card:last-child {
+    grid-column: 1 span;
+    margin-top: 0px;
+  }
 
   /* Support Content Title*/
   .support__content .title {
@@ -167,6 +191,23 @@
     line-height: 2.5rem;
     width: 90%;
     min-width: 350px;
+  }
+
+  /* Sign Up Wrapper  */
+  .sign__up__wrapper {
+    width: 70%;
+    padding: 3rem 2rem;
+    min-width: 100px;
+  }
+
+  /* Sign Up Header Item*/
+  .sign__up__item {
+    font-size: 14px;
+  }
+
+  /* Form Content Title  */
+  .form__content .title {
+    font-size: 2rem;
   }
 }
 
@@ -198,6 +239,46 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+
+  /* Contact Grid  */
+  .contact__grid_ {
+    grid-template-columns: 1fr;
+  }
+  /* Contact Card Content Icon */
+  .card__content .icon {
+    padding: 0 0 1rem 0;
+  }
+
+  /* Contact Card Content  */
+  .card__content {
+    padding: 2.5rem 0;
+  }
+
+  /* Contact grid */
+  .contact__grid {
+    flex-direction: column;
+  }
+
+  /* Contact Map  */
+  .contact__map iframe {
+    height: 350px;
+  }
+
+  /* Sign Up Header  */
+  .sign__up__header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Sign Up Wrapper  */
+  .sign__up__wrapper {
+    height: 850px;
+  }
+
+  /* Main Form  */
+  .main__form {
+    width: 100%;
+    height: 85%;
   }
 }
 

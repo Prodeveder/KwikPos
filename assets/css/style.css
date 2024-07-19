@@ -28,6 +28,7 @@
   --info: #3b82f6;
   --shade: #f2f2f2;
   --dark: #1a1a1a;
+  --someShade: #b3b3b3;
 
   /* Custom Data  */
   --width: 90%;
@@ -42,6 +43,7 @@ body {
   position: relative;
   font-family: font;
   background: var(--background);
+  overflow-x: hidden;
 }
 
 a {
@@ -58,6 +60,9 @@ nav {
   justify-content: center;
   align-items: center;
   background: var(--surface);
+}
+nav.fill {
+  background: var(--background);
 }
 
 /* Nav Wrapper  */
@@ -264,6 +269,9 @@ Header {
 header.pages {
   height: 325px;
 }
+header.pages.fill {
+  background: var(--background);
+}
 
 /* Header Title  */
 Header .title {
@@ -275,6 +283,15 @@ Header .title {
   line-height: 3.8rem;
   letter-spacing: -2px;
   color: var(--text-primary);
+
+  transform: translateX(1000vh);
+  animation: headerAnimation 1.5s ease-in-out forwards;
+}
+
+@keyframes headerAnimation {
+  to {
+    transform: translate(0);
+  }
 }
 
 /* Header Title Span*/
@@ -289,6 +306,15 @@ Header .text {
   text-align: center;
   color: var(--text-primary);
   padding: 1rem 0;
+  transform: translateX(-1000vh);
+
+  animation: headerAnimationText 1.5s ease-in-out forwards;
+}
+
+@keyframes headerAnimationText {
+  to {
+    transform: translate(0);
+  }
 }
 
 /* Header Button  */
@@ -296,6 +322,18 @@ header .btn {
   font-size: 1.2rem;
   padding: 1rem 2rem;
   border-radius: 2rem;
+
+  transform: translateY(1000vh);
+  opacity: 0;
+
+  animation: headerAnimationButton 2s ease-in-out forwards;
+}
+
+@keyframes headerAnimationButton {
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
 }
 
 /* Section  */
@@ -408,8 +446,6 @@ section .btn {
   align-items: stretch;
   width: 90%;
 }
-
-
 
 /* Columns Item  */
 .col__item {
@@ -672,8 +708,6 @@ section .btn {
   padding: 1rem 0 2rem 0;
 }
 
-
-
 /* Accordion Content  */
 .accordion__content {
   width: 92%;
@@ -749,7 +783,7 @@ section .btn {
 /* Accordion Panel Btn */
 .accordion__panel .btn {
   margin: 0 0 1em 0;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 @keyframes panel {
@@ -761,25 +795,25 @@ section .btn {
 
 /* Feature Grid */
 .feature_col {
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  gap: 2rem; 
-  row-gap: 1.5rem; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  row-gap: 1.5rem;
   justify-content: center;
-  align-items: stretch; 
+  align-items: stretch;
   width: 90%;
-} 
+}
 
 /* Feature Card  */
 .feature__card {
   width: 100%;
-  height: 100%; 
-  background: var(--background); 
-  box-shadow: 0 0 10px rgb(0 0 0 /0.10); 
-  
-  display: flex; 
+  height: 100%;
+  background: var(--background);
+  box-shadow: 0 0 10px rgb(0 0 0 /0.1);
+
+  display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 /* Feature Content  */
@@ -791,14 +825,13 @@ section .btn {
   grid-template-rows: 12rem 3rem 1fr;
   gap: 1rem;
   padding: 1rem 0 2rem 0;
-
 }
 
 /* Feature Vector  */
 .feature__vector {
   width: 100%;
   height: 100%;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -818,7 +851,7 @@ section .btn {
   font-size: 1.2rem;
   line-height: 1.1rem;
   letter-spacing: -1px;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -923,7 +956,7 @@ section .btn {
   position: relative;
 
   display: grid;
-  padding: 0 0 1.5rem ;
+  padding: 0 0 1.5rem;
   grid-template-rows: 3rem 5rem 2.5rem 12rem 2.5rem;
 }
 
@@ -995,7 +1028,6 @@ section .btn {
   font-weight: 100;
 }
 
-
 /* Price Content Description span*/
 .price__content .description span {
   color: var(--primary-accent);
@@ -1023,8 +1055,486 @@ section .btn {
   /* bottom: 0; */
 }
 
+/* Contact Section  */
+.contact__section {
+  width: 100%;
+  height: auto;
 
+  background: var(--background);
+  display: grid;
+  grid-template-columns: minmax(400px, 1fr) minmax(425px, 1fr);
+  padding: 1rem 0;
+}
 
+/* Contact Wrapper  */
+.contact__wrapper {
+  width: 100%;
+  height: auto;
+  background: var(--surface);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact Container  */
+.contact__container {
+  width: 100%;
+  height: auto;
+  background: var(--background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Contact Content  */
+.contact__content {
+  width: 100%;
+  padding: 2.5rem 0;
+  /* background: red; */
+
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Contact Container Title*/
+.contact__container .title {
+  letter-spacing: -2px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.contact__container .title span {
+  color: var(--primary-accent);
+}
+
+/* Contact Container Text*/
+.contact__container .text {
+  color: var(--text-primary);
+  opacity: 0.8;
+  line-height: 20px;
+  padding: 0.3rem 0;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+  width: 80%;
+  padding: 0.5rem 0;
+}
+
+/* Contact  Form*/
+.contact {
+  width: 85%;
+  height: auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Contact grid */
+.contact__grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0.8rem;
+}
+
+/* Contact Item */
+.contact__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  gap: 0.2rem;
+  overflow: hidden;
+}
+
+.contact__item div {
+  position: relative;
+  width: 100%;
+}
+
+.contact__item i {
+  color: var(--primary-accent);
+  position: absolute;
+  top: 0.6rem;
+  left: 0.5rem;
+}
+
+/* Contact Item Label */
+.contact__item label {
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  font-weight: 500;
+}
+
+/* Contact Item input */
+.contact__item input {
+  height: 2.2rem;
+  width: 100%;
+  outline: none;
+  padding: 0 0 0 2rem;
+  border: none;
+  border-bottom: 2px solid var(--primary-accent);
+  background: var(--surface);
+  font-family: font;
+  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact__item input::placeholder {
+  color: var(--text--primary--dark);
+}
+
+.contact__item input:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.contact__item input:focus {
+  opacity: 1;
+}
+
+/* Contact Item Button */
+.contact__item .btn {
+  width: 106%;
+  height: 2rem;
+  border-radius: 0.2rem;
+  padding: 0;
+}
+
+/* Contact Item Textarea */
+.contact__item textarea {
+  /* height: 2.2rem; */
+  width: 100%;
+  outline: none;
+  padding: 1rem 1rem 0 1rem;
+  border: none;
+  border-bottom: 2px solid var(--primary-accent);
+  background: var(--surface);
+  font-family: font;
+  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact__item textarea:focus {
+  opacity: 1;
+}
+
+/* Contact Map  */
+.contact__map {
+  width: 100%;
+}
+
+/* Contact Map  */
+.contact__map iframe {
+  width: 100%;
+}
+
+/* Contact Grid  */
+.contact__grid_ {
+  width: var(--width);
+  height: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Contact Card  */
+.contact__card {
+  width: 100%;
+  height: auto;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 10px rgb(0 0 0 /0.25);
+  background: var(--background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact Card Content  */
+.card__content {
+  padding: 2rem 0;
+  width: 85%;
+  height: 80%;
+  display: grid;
+  grid-template-rows: 40% 60%;
+}
+
+/* Contact Card Content Icon */
+.card__content .icon {
+  width: 100%;
+  height: auto;
+  /* padding: 0 0 3rem 0; */
+}
+
+.card__content .icon i {
+  background: var(--shade);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-accent);
+  font-size: 1.2rem;
+}
+
+/* Contact Card Content .Content */
+.card__content .content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* Contact Card Content .Content Title*/
+.card__content .content .title {
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+/* Contact Card Content .Content Text*/
+.card__content .content .text {
+  color: var(--text-primary);
+  opacity: 0.8;
+  line-height: 20px;
+  padding: 0.3rem 0;
+  width: 100%;
+}
+
+.contact_a {
+  text-decoration: underline;
+  color: var(--text-primary);
+  transition: all 0.1s ease-in-out;
+}
+.contact_a:hover {
+  color: var(--primary-accent);
+}
+
+/* Sign Container  */
+.sign__container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+/* Sign Up Wrapper  */
+.sign__up__wrapper {
+  width: 50%;
+  min-width: 500px;
+  height: 800px;
+  box-shadow: 0 0 10px rgb(0 0 0 /0.25);
+  padding: 3rem 3rem;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+/* Sign Up Header  */
+.sign__up__header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+/* Sign Up Bottom  */
+.sign__up__bottom {
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  bottom: 0px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Sign Up Button  */
+.sign__up__bottom .btn {
+  background: var(--shade);
+  padding: 0;
+  width: 7rem;
+  border-radius: 0.2rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.sign__up__bottom .btn i {
+  color: var(--text-primary);
+}
+
+.sign__up__bottom .btn.fill {
+  background: var(--primary-accent);
+  color: var(--background);
+}
+
+.sign__up__bottom .btn.fill i {
+  color: var(--background);
+}
+/* Sign Up Header Item*/
+.sign__up__item {
+  width: 100%;
+  height: auto;
+  border-bottom: 4px solid var(--shade);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 0 0.8rem 0;
+  line-height: 15px;
+
+  color: var(--someShade);
+  font-size: 16px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.sign__up__item.active {
+  border-bottom: 4px solid var(--primary-accent);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Main Form  */
+.main__form {
+  width: 100%;
+  height: 94%;
+  padding: 1rem 0 0 0;
+}
+
+/* Form Content  */
+.form__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+/* Form Content Title  */
+.form__content .title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: -2px;
+  color: var(--text-primary);
+  padding: 2rem 0;
+}
+
+/* Form Content Item  */
+.form__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 0 0 1.5rem 0;
+}
+
+/* Form Content Item label*/
+.form__item label {
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 5;
+  position: absolute;
+  top: -12px;
+  background: var(--background);
+  left: 0.6rem;
+}
+
+/* Form Content Item input*/
+.form__item input {
+  z-index: 1;
+  outline: none;
+  width: 98%;
+  padding: 0.8rem 0.2rem 0.8rem 0.6rem;
+  border: 2px solid var(--shade);
+  border-radius: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.form__item input.file {
+  width: 100px;
+  display: none;
+}
+
+.form__item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1.5rem;
+  color: var(--primary-accent);
+  font-weight: bold;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.form__item input:focus {
+  border: 2px solid var(--primary-accent);
+}
+
+.form__item input:hover {
+  border: 2px solid var(--primary-accent);
+}
+
+/* Combo Box  */
+
+.search_select__box {
+  width: 100%;
+}
+
+.form__item select {
+  width: 101%;
+  padding: 0.8rem 0.2rem 0.8rem 0.6rem;
+  border: 2px solid var(--shade);
+  background: var(--background);
+  border-radius: 0.2rem;
+}
+
+/* Drop Zone for Image  */
+.form__item .drop__zone {
+  z-index: 1;
+  outline: none;
+  width: 98%;
+  height: 200px;
+  padding: 0.8rem 0.2rem 0.8rem 0.6rem;
+  border: 2px dashed var(--shade);
+  border-radius: 0.2rem;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.form__item .drop__zone.drag {
+  border: 2px dashed var(--primary-accent);
+}
+
+/* Steps  */
+.step1 {
+  display: none;
+}
 /* Footer  */
 footer {
   width: 100%;

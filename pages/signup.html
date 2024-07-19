@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/combobox.js" defer></script>
   </head>
   <body>
     <div class="mobile__nav__wrapper">
@@ -63,7 +64,7 @@
         <ul class="navbar mobile">
           <li><a href="index.html">Home</a></li>
           <li><a href="features.html">Features</a></li>
-          <li><a class="active" href="pricing.html">Pricing</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -94,7 +95,7 @@
         <ul class="navbar desktop">
           <li><a href="index.html">Home</a></li>
           <li><a href="features.html">Features</a></li>
-          <li><a class="active" href="pricing.html">Pricing</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -118,146 +119,168 @@
       </div>
     </nav>
     <header class="pages fill">
-      <h1 class="title">Our <span>Pricing</span></h1>
+      <h1 class="title">Sign <span>Up</span></h1>
       <p class="text">
-        We offer flexible and affordable pricing plans to suit businesses of all
-        sizes. Whether you're a small startup or a large enterprise, KwikPos has
-        a plan that's right for you. Explore our pricing options below and find
-        the perfect match for your business.
+        We’re excited to welcome you to KwikPos, the ultimate POS solution that
+        streamlines business operations, enhances customer experiences, and
+        boosts your bottom line. Sign up to unlock powerful features and
+        exclusive benefits tailored to your business needs.
       </p>
       <hr />
     </header>
 
-    <section class="features">
-      <div class="payment__duration__wrapper">
-        <div class="payment__container">
-          <div class="payment month fill">Monthly</div>
-          <div class="payment yearly">Annual</div>
-        </div>
-      </div>
+    <section class="features sign">
+      <div class="sign__container">
+        <div class="sign__up__wrapper">
+          <div class="sign__up__header">
+            <div class="sign__up__item active">
+              Business <span>Information</span>
+            </div>
+            <div class="sign__up__item">Contact <span>Information</span></div>
+            <div class="sign__up__item">Tax <span>Information</span></div>
+            <div class="sign__up__item">Owner <span>Information</span></div>
+          </div>
+          <form action="#" class="main__form">
+            <div class="form__content step1">
+              <div class="title">Business Information</div>
+              <div class="form__item">
+                <label for="name">Business Name*</label>
+                <input
+                  class="form-control valid"
+                  placeholder="Business Name"
+                  required=""
+                  name="name"
+                  type="text"
+                  id="name"
+                  aria-required="true"
+                  aria-invalid="false"
+                />
+              </div>
 
-      <div class="grid col_3">
-        <div class="price__card">
-          <div class="price__content">
-            <div class="plan">
-              Free Trial
-              <div class="tag">30 day free trial</div>
+              <div class="form__item">
+                <label for="start_date">Start Date*</label>
+                <input
+                  class="form-control valid"
+                  required=""
+                  name="start_date"
+                  type="date"
+                  id="start_date"
+                  aria-required="true"
+                  aria-invalid="false"
+                />
+              </div>
+
+              <div class="form__item">
+                <label for="currency">Currency</label>
+                <select name="currency" id="currency">
+                  <option value="" disabled selected>Select a currency</option>
+                  <option value="ZAR">South African Rand (ZAR)</option>
+                  <option value="USD">US Dollar (USD)</option>
+                  <option value="EUR">Euro (EUR)</option>
+                  <option value="GBP">British Pound (GBP)</option>
+                  <option value="JPY">Japanese Yen (JPY)</option>
+                  <option value="CNY">Chinese Yuan (CNY)</option>
+                  <option value="CAD">Canadian Dollar (CAD)</option>
+                  <option value="AUD">Australian Dollar (AUD)</option>
+                  <option value="CHF">Swiss Franc (CHF)</option>
+                  <option value="INR">Indian Rupee (INR)</option>
+                  <option value="SGD">Singapore Dollar (SGD)</option>
+                  <option value="HKD">Hong Kong Dollar (HKD)</option>
+                  <option value="NZD">New Zealand Dollar (NZD)</option>
+                </select>
+              </div>
+
+              <div class="form__item">
+                <label for="start_date">Website URL</label>
+                <input class="form-control valid" required="" name="start_date"
+                type="url" id="start_date" aria-required="true"
+                aria-invalid="false" placeholder="https://example.com"
+              </div>
             </div>
-            <div class="price">R0.00<span>/month</span></div>
-            <div class="description">
-              Free plan for all users. <span>Valid for 30 days.</span>
+
+            <div class="form__item">
+              <label for="logo">Business Logo</label>
+              <div class="drop__zone">
+                <span class="drop__name"
+                  >Drop file here or click to upload</span
+                >
+                <input type="file" class="file file__upload" />
+              </div>
             </div>
-            <ul>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Unlimited Business Locations</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Unlimited Users</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Unlimited Products</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Unlimited Invoices</span>
-              </li>
-            </ul>
-            <a href="#" class="btn fill">Get Started</a>
           </div>
-        </div>
-        <div class="price__card">
-          <div class="price__content">
-            <div class="plan">
-              Basic Plan
-              <div class="tag">Billed monthly</div>
+          <div class="form__content step2">
+            <div class="title">Business Information</div>
+            <div class="form__item">
+              <label for="name">Business Name*</label>
+              <input
+                class="form-control valid"
+                placeholder="Business Name"
+                required=""
+                name="name"
+                type="text"
+                id="name"
+                aria-required="true"
+                aria-invalid="false"
+              />
             </div>
-            <div class="price">
-              <div class="pr">R499.99</div>
-              <span>/month</span>
+
+            <div class="form__item">
+              <label for="start_date">Start Date*</label>
+              <input
+                class="form-control valid"
+                required=""
+                name="start_date"
+                type="date"
+                id="start_date"
+                aria-required="true"
+                aria-invalid="false"
+              />
             </div>
-            <div class="description">
-              Unlimited access to essential features.
+
+            <div class="form__item">
+              <label for="currency">Currency</label>
+              <select name="currency" id="currency">
+                <option value="" disabled selected>Select a currency</option>
+                <option value="ZAR">South African Rand (ZAR)</option>
+                <option value="USD">US Dollar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">British Pound (GBP)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+                <option value="CNY">Chinese Yuan (CNY)</option>
+                <option value="CAD">Canadian Dollar (CAD)</option>
+                <option value="AUD">Australian Dollar (AUD)</option>
+                <option value="CHF">Swiss Franc (CHF)</option>
+                <option value="INR">Indian Rupee (INR)</option>
+                <option value="SGD">Singapore Dollar (SGD)</option>
+                <option value="HKD">Hong Kong Dollar (HKD)</option>
+                <option value="NZD">New Zealand Dollar (NZD)</option>
+              </select>
             </div>
-            <ul>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>1 Business Locations</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>5 Users</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Unlimited Products</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Unlimited Invoices</span>
-              </li>
-            </ul>
-            <a href="#" class="btn fill">Get Started</a>
+
+            <div class="form__item">
+              <label for="start_date">Website URL</label>
+              <input class="form-control valid" required="" name="start_date"
+              type="url" id="start_date" aria-required="true"
+              aria-invalid="false" placeholder="https://example.com"
+            </div>
           </div>
+
         </div>
-        <div class="price__card">
-          <div class="price__content">
-            <div class="plan">
-              Premium Plan
-              <div class="tag">Billed monthly</div>
+          </form>
+
+          <div class="sign__up__bottom">
+            <div class="btn">
+              <i class="fa-solid fa-arrow-left"></i>
+              Back
             </div>
-            <div class="price">
-              <div class="pr">R799.99</div>
-              <span>/month</span>
+            <div class="btn fill">
+              Next
+              <i class="fa-solid fa-arrow-right"></i>
             </div>
-            <div class="description">
-              Advanced features with prioritized support and analytics.
-            </div>
-            <ul>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>2 Business Locations</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>10 Users</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Unlimited Products</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Unlimited Invoices</span>
-              </li>
-            </ul>
-            <a href="#" class="btn fill">Get Started</a>
           </div>
         </div>
       </div>
     </section>
-    <div class="support__wrapper">
-      <img src="assets/images/point__of__sale.jpg" alt="Retail Image" />
-      <div class="support__container">
-        <div class="support__content">
-          <h3 class="title">
-            Your Comprehensive Resource Hub for Kwik<span>Pos</span> Support and
-            Information.
-          </h3>
-          <p class="text">
-            Get the most out of KwikPos Our dedicated support center is here to
-            help you with any questions, issues, or troubleshooting needs you
-            may have with KwikPos. Whether you're a new user or a seasoned pro,
-            our team of experts is available to assist you and ensure you're
-            maximizing the efficiency and functionality of KwikPos.
-          </p>
-
-          <a href="contact.html" class="btn fill">Contact Us</a>
-        </div>
-      </div>
-    </div>
 
     <footer>
       <div class="footer__wrapper">
