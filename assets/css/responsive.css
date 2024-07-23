@@ -195,14 +195,9 @@
 
   /* Sign Up Wrapper  */
   .sign__up__wrapper {
-    width: 70%;
-    padding: 3rem 2rem;
+    width: 85%;
+    padding: 2rem 1rem;
     min-width: 100px;
-  }
-
-  /* Sign Up Header Item*/
-  .sign__up__item {
-    font-size: 14px;
   }
 
   /* Form Content Title  */

@@ -387,6 +387,14 @@ hr {
   border-radius: 5px;
   background: var(--primary-accent);
   border: none;
+  transform: translateX(1000vh);
+  animation: headerAnimation 1.8s ease-in-out forwards;
+}
+
+@keyframes headerAnimation {
+  to {
+    transform: translate(0);
+  }
 }
 
 /* Section Header  Title */
@@ -814,6 +822,12 @@ section .btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.feature__card:hover {
+  transform: scale(1.05);
 }
 
 /* Feature Content  */
@@ -947,6 +961,10 @@ section .btn {
   align-items: center;
   position: relative;
   transition: all 0.2s ease-in-out;
+}
+
+.price__card:hover {
+  transform: scale(1.05);
 }
 
 /* Price Content  */
@@ -1201,6 +1219,41 @@ section .btn {
   opacity: 1;
 }
 
+.contact__item select {
+  width: 100%;
+  padding: .6rem .3rem .6rem 2rem;
+  background: var(--surface);
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid var(--primary-accent);
+  opacity: 0.6;
+}
+
+.contact__item .file {
+  height: 2.2rem;
+  width: 100%;
+  outline: none;
+  padding: 0 0 0 2rem;
+  border: none;
+  border-bottom: 2px solid var(--primary-accent);
+  background: var(--surface);
+  font-family: font;
+  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact__item .file span {
+  opacity: .5;
+}
+
+.contact__item .file__upload {
+  display: none;
+}
+
 /* Contact Item Button */
 .contact__item .btn {
   width: 106%;
@@ -1320,41 +1373,25 @@ section .btn {
   color: var(--primary-accent);
 }
 
-/* Sign Container  */
-.sign__container {
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 2rem;
-}
-
 /* Sign Up Wrapper  */
-.sign__up__wrapper {
-  width: 50%;
-  min-width: 500px;
-  height: 800px;
-  box-shadow: 0 0 10px rgb(0 0 0 /0.25);
-  padding: 3rem 3rem;
-  border-radius: 0.4rem;
-  position: relative;
-}
+.sign__up__wrapper{
+  width: 90%;
+  max-width: 775px;
+  height: auto;
+  background: var(--background);
+  box-shadow: 0 0 10px rgb(0 0 0 /0.15);
+  padding: 4rem 3rem;
+  border-radius: .5rem;
 
-/* Sign Up Header  */
-.sign__up__header {
-  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 0.5rem;
+  grid-template-rows: 4rem 1fr 3rem;
+  gap: 2rem;
 }
 
-/* Sign Up Bottom  */
-.sign__up__bottom {
+/* Support up Buttons  */
+.sign__up__buttons {
   width: 100%;
-  height: 3rem;
-  position: absolute;
-  bottom: 0px;
+  height: 100%;
 
   display: flex;
   justify-content: flex-start;
@@ -1362,179 +1399,94 @@ section .btn {
   gap: 1rem;
 }
 
-/* Sign Up Button  */
-.sign__up__bottom .btn {
-  background: var(--shade);
+.sign__up__buttons .btn {
   padding: 0;
-  width: 7rem;
-  border-radius: 0.2rem;
-  height: 2.5rem;
+  background: var(--surface);
+  height: 2rem;
+  width: 8rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  color: var(--text-primary);
+  gap: .5rem;
+  border-radius: .2rem;
 }
 
-.sign__up__bottom .btn i {
-  color: var(--text-primary);
+.sign__up__buttons .btn i {
+  font-size: 1rem;
 }
 
-.sign__up__bottom .btn.fill {
+.sign__up__buttons .btn.fill {
   background: var(--primary-accent);
-  color: var(--background);
 }
-
-.sign__up__bottom .btn.fill i {
-  color: var(--background);
-}
-/* Sign Up Header Item*/
-.sign__up__item {
+/* Sign Up Header  */
+.sign__up__header {
   width: 100%;
-  height: auto;
-  border-bottom: 4px solid var(--shade);
+  height: 100%;
 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Header Item  */
+.header__item {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-direction: column;
-  padding: 0 0 0.8rem 0;
-  line-height: 15px;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 3px solid #ebebeb;
+  border-radius: 0 0;
 
-  color: var(--someShade);
-  font-size: 16px;
-  font-weight: 200;
-  cursor: pointer;
+  font-weight: bold;
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
-.sign__up__item.active {
-  border-bottom: 4px solid var(--primary-accent);
+.header__item.active {
   color: var(--text-primary);
-  font-weight: 500;
+  border-bottom: 3px solid var(--primary-accent);
 }
 
-/* Main Form  */
-.main__form {
+/* Sign Up Container  */
+.sign__up__container {
   width: 100%;
-  height: 94%;
-  padding: 1rem 0 0 0;
+  height: 100%;
+}
+
+.sign__up__container .title {
+  font-size: 2.5rem;
+  letter-spacing: -2px;
 }
 
 /* Form Content  */
 .form__content {
   width: 100%;
   height: 100%;
-  display: flex;
+
+  
+  display: none;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  width: 100%;
-  position: relative;
+  gap: 1rem;
+  transform: translateX(50vw);
+
+  animation: formAnimation 1.5s ease-in-out forwards;
+  opacity: 0;
 }
 
-/* Form Content Title  */
-.form__content .title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: -2px;
-  color: var(--text-primary);
-  padding: 2rem 0;
+@keyframes formAnimation {
+  to {
+    transform: translate(0);
+    opacity: 1;
+
+  }
 }
 
-/* Form Content Item  */
-.form__item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  padding: 0 0 1.5rem 0;
-}
 
-/* Form Content Item label*/
-.form__item label {
-  font-size: 18px;
-  font-weight: bold;
-  z-index: 5;
-  position: absolute;
-  top: -12px;
-  background: var(--background);
-  left: 0.6rem;
-}
-
-/* Form Content Item input*/
-.form__item input {
-  z-index: 1;
-  outline: none;
-  width: 98%;
-  padding: 0.8rem 0.2rem 0.8rem 0.6rem;
-  border: 2px solid var(--shade);
-  border-radius: 0.2rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.form__item input.file {
-  width: 100px;
-  display: none;
-}
-
-.form__item span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  font-size: 1.5rem;
-  color: var(--primary-accent);
-  font-weight: bold;
-  opacity: 0.5;
-  text-align: center;
-}
-
-.form__item input:focus {
-  border: 2px solid var(--primary-accent);
-}
-
-.form__item input:hover {
-  border: 2px solid var(--primary-accent);
-}
-
-/* Combo Box  */
-
-.search_select__box {
-  width: 100%;
-}
-
-.form__item select {
-  width: 101%;
-  padding: 0.8rem 0.2rem 0.8rem 0.6rem;
-  border: 2px solid var(--shade);
-  background: var(--background);
-  border-radius: 0.2rem;
-}
-
-/* Drop Zone for Image  */
-.form__item .drop__zone {
-  z-index: 1;
-  outline: none;
-  width: 98%;
-  height: 200px;
-  padding: 0.8rem 0.2rem 0.8rem 0.6rem;
-  border: 2px dashed var(--shade);
-  border-radius: 0.2rem;
-  transition: all 0.2s ease-in-out;
-  position: relative;
-}
-
-.form__item .drop__zone.drag {
-  border: 2px dashed var(--primary-accent);
-}
-
-/* Steps  */
-.step1 {
-  display: none;
-}
 /* Footer  */
 footer {
   width: 100%;

@@ -39,7 +39,7 @@ accordionHeader.forEach((element) => {
 // Pricing Model
 
 const paymentDuration = document.querySelectorAll(".payment"),
-  prices = document.querySelectorAll('.pr')
+  prices = document.querySelectorAll(".pr");
 
 const clearPayment = () => {
   paymentDuration.forEach((duration) => {
@@ -53,3 +53,25 @@ paymentDuration.forEach((duration) => {
     duration.classList.add("fill");
   });
 });
+
+// File Upload
+const fileUpload = document.querySelector(".file__upload");
+const fileSpan = document.querySelector(".file span");
+const file = document.querySelector(".file");
+let fileName;
+
+file.addEventListener("click", () => {
+  fileUpload.click();
+});
+
+fileUpload.addEventListener("change", () => {
+  if (fileUpload.files.length > 0) {
+    fileName = fileUpload.files[0].name;
+    fileSpan.textContent = fileName;
+  }
+});
+
+
+
+// COntact Form 
+
