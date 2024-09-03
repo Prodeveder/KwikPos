@@ -1,0 +1,455 @@
+/* Screen Width : 1050px */
+@media (max-width: 1050px) {
+  /* Feature Images */
+  .features__images {
+    display: none;
+  }
+
+  /* Contact Grid  */
+  .contact__grid_ {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Features Wrapper */
+  .features__wrapper {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Features Grid */
+  .features__grid {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Feature Card Header */
+  .feature__card__header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Feature Card Text */
+  .feature__card__text {
+    text-align: center;
+  }
+
+  /* Container Features  */
+  .container.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Features Header */
+  .features__header {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Pricing Section  */
+  section.pricing {
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Accordion Wrapper Header  */
+  .accordion__wrapper .features__header {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .accordion__wrapper .features__header .text,
+  .accordion__wrapper .features__header .title {
+    text-align: left;
+  }
+
+  /* Services Item */
+  .services__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Features Header Text & Title */
+  .features__header .text,
+  .features__header .title {
+    text-align: center;
+  }
+
+  /* Services Grid */
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Service */
+  .service {
+    height: 155px;
+  }
+
+  /* Pricing Grid  */
+  .pricing__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Price Card Last Child  */
+  .price__card:last-child {
+    grid-column: 2 span;
+    margin-top: 0.5rem;
+  }
+
+  /* Service Feature  */
+  .service.feature {
+    height: 195px;
+  }
+}
+
+/* Screen Width : 975px */
+@media (min-width: 975px) {
+  /* Mobile Navbar Wrapper */
+  .mobile__navbar__wrapper {
+    display: none;
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+@media (max-width: 975px) {
+  /* Nav */
+  .nav {
+    display: none;
+  }
+
+  /* Navbar Item */
+  .navbar__item {
+    display: none;
+  }
+
+  /* Menu */
+  .menu {
+    display: flex;
+  }
+
+  /* Accordion Wrapper Header  */
+  .accordion__wrapper .features__header {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .accordion__wrapper .features__header .text,
+  .accordion__wrapper .features__header .title {
+    text-align: center;
+  }
+
+  /* Accordion Wrapper */
+  .accordion__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  /* Accordion Container */
+  .accordion__container {
+    padding: 0 0 0 0;
+  }
+}
+
+/* Screen Width : 875px */
+@media (max-width: 875px) {
+  /* Container Support */
+  .container.support {
+    grid-template-columns: minmax(100px, 200px) minmax(400px, 1fr);
+    gap: 0.2rem;
+  }
+
+  /* Support Image */
+  .support__image:first-child {
+    display: none;
+  }
+
+  /* Service Feature  */
+  .service.feature {
+    height: 205px;
+  }
+}
+
+/* Screen Width : 775px */
+@media (max-width: 775px) {
+  /* Header Container Title  */
+  .header__container .title {
+    line-height: 3.2rem;
+    font-size: 3.5rem;
+    width: 575px;
+  }
+
+  /* Header Container Text  */
+  .header__container .text {
+    max-width: 675px;
+  }
+
+  /* Features Header Text */
+  .features__header .text {
+    max-width: 675px;
+  }
+
+  /* Feature Grid */
+  .feature__grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Features Grid */
+  .features__grid {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Feature Card */
+  .feature__card {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Feature Card Text */
+  .feature__card__text {
+    width: 90%;
+    min-width: 200px;
+  }
+}
+
+/* Screen Width : 675px */
+@media (max-width: 675px) {
+  /* Header Container Title  */
+  .header__container .title {
+    line-height: 2.6rem;
+    font-size: 2.8rem;
+    width: 475px;
+  }
+
+  /* Header Container Text  */
+  .header__container .text {
+    max-width: 475px;
+  }
+
+  /* Header  */
+  header {
+    height: 575px;
+  }
+
+  /* Features Header Text */
+  .features__header .text {
+    max-width: 575px;
+  }
+
+  /* Services Grid */
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  /* Service */
+  .service {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .container.support {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  /* Support Image */
+  .support__image {
+    display: none;
+  }
+
+  /* Pricing Grid  */
+  .pricing__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Price Card Last Child  */
+  .price__card:last-child {
+    grid-column: 1 span;
+  }
+
+  /* Contact Section  */
+  .contact__section {
+    grid-template-columns: minmax(300px, 1fr);
+    gap: 0;
+  }
+
+  /* Contact Map  */
+  .contact__map iframe {
+    width: 100%;
+    height: 400px;
+  }
+
+  /* Service Feature  */
+  .service.feature {
+    height: 165px;
+  }
+}
+
+/* Screen Width : 575px */
+@media (max-width: 575px) {
+  /* Contact Grid  */
+  .contact__grid_ {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mobile Navbar Wrapper */
+  .mobile__navbar__wrapper {
+    max-width: 350px;
+  }
+
+  /* Mobile Nav  */
+  .mobile__nav {
+    flex-direction: column;
+  }
+
+  /* Header  */
+  header {
+    height: 525px;
+  }
+
+  /* Features Header Text */
+  .features__header .text {
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  /* Support Content Title */
+  .support__content .title {
+    font-size: 1.6rem;
+  }
+
+  /* Support Content Text */
+  .support__content .text {
+    font-size: 14px;
+  }
+
+  .footer__brand .mobile__nav {
+    display: none;
+  }
+
+  /* Footer Copyright Link */
+  .footer__copyright a {
+    font-size: 14px;
+  }
+
+  /* Footer Copyright */
+  .footer__copyright {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Header Content Title*/
+  .header__content_ .title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Screen Width : 475px */
+@media (max-width: 475px) {
+  /* Mobile Navbar Wrapper */
+  .mobile__navbar__wrapper {
+    max-width: 300px;
+  }
+
+  /* Header Container Title  */
+  .header__container .title {
+    line-height: 2.6rem;
+    font-size: 2.2rem;
+    width: 90%;
+  }
+
+  /* Header Container Text  */
+  .header__container .text {
+    max-width: 90%;
+  }
+
+  /* Header  */
+  header {
+    height: 475px;
+  }
+
+  /* Features Header Title */
+  .features__header .title {
+    font-size: 2.5rem;
+    line-height: 2.3rem;
+  }
+
+  /* Support Box */
+  .support__box {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /* accordion Title*/
+  .accordion .acc__title {
+    font-size: 1rem;
+  }
+
+  /* accordion Text*/
+  .accordion .acc__text {
+    font-size: 0.8rem;
+  }
+
+  /* Footer Brand Text*/
+  .footer__brand .text {
+    font-size: 14px;
+  }
+
+  /* Contact grid */
+  .contact__grid {
+    flex-direction: column;
+  }
+
+    /* Service Feature  */
+    .service.feature {
+      height: auto;
+    }
+}
+
+/* Screen Width : 375px */
+@media (max-width: 375px) {
+  /* Mobile Navbar Wrapper */
+  .mobile__navbar__wrapper {
+    max-width: 265px;
+  }
+
+  /* Mobile Navbar Item  */
+  .mobile__navbar__item {
+    flex-direction: column;
+  }
+
+  /* Header Item */
+  .header__item {
+    flex-direction: column;
+  }
+
+  /* Header Container Text  */
+  .header__container .text {
+    font-size: 14px;
+  }
+
+  /* Header Container Title  */
+  .header__container .title {
+    line-height: 2rem;
+    font-size: 2rem;
+    width: 90%;
+  }
+
+  /* Features Header Title */
+  .features__header .title {
+    font-size: 2rem;
+    line-height: 2.1rem;
+  }
+}

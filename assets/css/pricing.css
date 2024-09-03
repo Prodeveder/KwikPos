@@ -1,0 +1,195 @@
+
+/* Pricing Section  */
+section.pricing {
+    width: 95%;
+}
+
+/* Pricing Grid  */
+.pricing__grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 0 0 2rem 0;
+}
+
+
+/* Payment Duration Wrapper  */
+.payment__duration__wrapper {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+/* Payment Container  */
+.payment__container {
+  width: 14rem;
+  height: 2rem;
+  padding: 0.3rem 0.2rem 0.4rem 0.2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgb(0 0 0 /0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Payment  */
+.payment {
+  width: 6rem;
+  border-radius: 1rem;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.payment.yearly {
+  display: none;
+}
+
+.payment.fill {
+  background: var(--primary-accent);
+  color: var(--background);
+}
+
+.payment:hover {
+  background: var(--shade);
+}
+
+.payment.fill:hover {
+  background: var(--primary-dark);
+}
+
+/* Price Card  */
+.price__card {
+  width: 100%;
+  height: auto;
+  padding: 1.2rem 0;
+  box-shadow: 0 0 10px rgb(0 0 0 /0.1);
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.price__card:hover {
+  transform: scale(1.05);
+}
+
+/* Price Content  */
+.price__content {
+  width: 88%;
+  height: 88%;
+  position: relative;
+
+  display: grid;
+  padding: 0 0 1.5rem;
+  grid-template-rows: 3rem 5rem 2.5rem 12rem 2.5rem;
+}
+
+/* Price Content  Plan*/
+.price__content .plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Price Content  Price*/
+.price__content .price {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  letter-spacing: -3px;
+  color: var(--accent);
+}
+.price__content .price span {
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  color: var(--primary-accent);
+}
+
+.price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.pr {
+  line-height: 2.5rem;
+}
+
+/* Price Content  UL*/
+.price__content ul {
+  list-style: none;
+  padding: 1rem 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.price__content ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+
+  font-size: 0.9rem;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.price__content ul li:hover {
+  transform: scaleX(1.05);
+}
+
+/* Price Content  UL, Description*/
+.price__content ul li span,
+.price__content .description,
+.price__content .plan .tag {
+  opacity: 0.5;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+/* Price Content Description span*/
+.price__content .description span {
+  color: var(--primary-accent);
+  font-weight: bold;
+}
+
+.price__content ul li svg,
+.price__content ul li i {
+  width: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--accent);
+  fill: var(--accent);
+}
+
+.price__content .btn {
+  border-radius: 0.4rem;
+  padding: 0.5rem 0;
+  width: 100%;
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

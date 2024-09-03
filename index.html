@@ -40,185 +40,249 @@
     <link rel="canonical" href="index.html" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <script src="assets/js/script.js" defer></script>
+
+    <script src="assets/js/main.js" defer></script>
   </head>
   <body>
-    <div class="mobile__nav__wrapper">
-      <div class="mobile__nav">
-        <div class="mobile__nav__top">
-          <div class="close">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="40px"
-              viewBox="0 -960 960 960"
-              width="40px"
-              fill="#e8eaed"
-            >
-              <path
-                d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"
-              />
-            </svg>
-          </div>
+    <!-- Mobile Navbar Container -->
+    <div class="mobile__navbar__wrapper">
+      <div class="mobile__navbar__container">
+        <div class="close__navbar">
+          <svg
+            class="close__ico"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm79 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+            />
+          </svg>
         </div>
-        <ul class="navbar mobile">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="nav__item mobile">
-          <a href="login.html" class="btn fill__up">Sign in</a>
-          <a href="signup.html" class="btn fill">Sign up</a>
-        </div>
-      </div>
-    </div>
-    <nav>
-      <div class="nav__wrapper">
-        <a href="index.html">
-          <div class="nav__brand">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#e8eaed"
-            >
-              <path
-                d="M280-640q-33 0-56.5-23.5T200-720v-80q0-33 23.5-56.5T280-880h400q33 0 56.5 23.5T760-800v80q0 33-23.5 56.5T680-640H280Zm0-80h400v-80H280v80ZM160-80q-33 0-56.5-23.5T80-160v-40h800v40q0 33-23.5 56.5T800-80H160ZM80-240l139-313q10-22 30-34.5t43-12.5h376q23 0 43 12.5t30 34.5l139 313H80Zm260-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm120 160h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm120 160h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Z"
-              />
-            </svg>
-            Kwik<span>Pos</span>
-          </div>
-        </a>
-        <ul class="navbar desktop">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="nav__item desktop">
-          <a href="login.html" class="btn">Sign in</a>
-          <a href="signup.html" class="btn fill">Sign up</a>
-        </div>
-        <div class="menu">
+
+        <a href="index.html" class="brand">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="24px"
             viewBox="0 -960 960 960"
-            width="24px"
             fill="#e8eaed"
           >
             <path
-              d="M80-160v-160h160v160H80Zm240 0v-160h560v160H320ZM80-400v-160h160v160H80Zm240 0v-160h560v160H320ZM80-640v-160h160v160H80Zm240 0v-160h560v160H320Z"
+              d="M280-640q-33 0-56.5-23.5T200-720v-80q0-33 23.5-56.5T280-880h400q33 0 56.5 23.5T760-800v80q0 33-23.5 56.5T680-640H280Zm0-80h400v-80H280v80ZM160-80q-33 0-56.5-23.5T80-160v-40h800v40q0 33-23.5 56.5T800-80H160ZM80-240l139-313q10-22 30-34.5t43-12.5h376q23 0 43 12.5t30 34.5l139 313H80Zm260-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm120 160h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm120 160h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Z"
+            ></path>
+          </svg>
+          <span>KwikPos</span>
+        </a>
+
+        <ul class="mobile__nav">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="mobile__navbar__item">
+          <a href="404.html" class="btn">Register</a>
+          <a href="404.html" class="btn fill">Login</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar Container -->
+    <div class="navbar__container">
+      <div class="navbar">
+        <a href="index.html" class="brand">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e8eaed"
+          >
+            <path
+              d="M280-640q-33 0-56.5-23.5T200-720v-80q0-33 23.5-56.5T280-880h400q33 0 56.5 23.5T760-800v80q0 33-23.5 56.5T680-640H280Zm0-80h400v-80H280v80ZM160-80q-33 0-56.5-23.5T80-160v-40h800v40q0 33-23.5 56.5T800-80H160ZM80-240l139-313q10-22 30-34.5t43-12.5h376q23 0 43 12.5t30 34.5l139 313H80Zm260-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm120 160h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm120 160h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Z"
+            ></path>
+          </svg>
+          <span>KwikPos</span>
+        </a>
+
+        <ul class="nav">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="navbar__item">
+          <a href="404.html" class="btn">Register</a>
+          <a href="404.html" class="btn fill">Login</a>
+        </div>
+
+        <div class="menu">
+          <svg
+            class="menu__ico"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
             />
           </svg>
         </div>
       </div>
-    </nav>
+    </div>
+
+    <!-- Header -->
     <header>
-      <h1 class="title">
-        Boost Store Efficiency and Productivity with Kwik<span>Pos</span> POS
-        System
-      </h1>
-      <p class="text">
-        Experience seamless transactions, real-time inventory tracking, and
-        comprehensive sales reports, all in one easy-to-use platform designed to
-        streamline your operations and boost efficiency
-      </p>
-      <a
-        href="signup.html"
-        class="btn fill"
-        >Get Started - it's free</a
-      >
-    </header>
-    <section>
-      <div class="grid col_1_2">
-        <div class="col__item title__section">
-          <h2 class="title">
-            Optimize your operations with our advanced POS features.
-          </h2>
-          <a
-            href="features.html
-		  "
-            class="btn fill"
-            >Learn More</a
-          >
+      <img
+        src="assets/images/header/header.jpg"
+        alt="Header Image"
+        class="header__image"
+      />
+      <div class="header__container">
+        <div class="title">
+          Boost Store Efficiency and Productivity with KwikPos POS System
         </div>
-
-        <div class="col__item col_2">
-          <div>
-            <h3 class="header">Real-Time Inventory Management</h3>
-            <p class="text">
-              Effortlessly monitor stock levels with real-time updates, ensuring
-              optimal inventory management. Track sales, replenish stock, and
-              minimize overstock or stockouts to meet customer demands
-              effectively.
-            </p>
-          </div>
-          <div>
-            <h3 class="header">Integrated Payment Processing</h3>
-            <p class="text">
-              Accept multiple payment methods like credit/debit cards, mobile
-              payments, and contactless transactions in one system for faster
-              checkouts and enhanced customer satisfaction.
-            </p>
-          </div>
-          <div>
-            <h3 class="header">Customizable Sales Promotions</h3>
-            <p class="text">
-              Create and manage customized sales promotions—from discounts and
-              bundles to seasonal offers—to attract customers, boost sales, and
-              enhance customer satisfaction and loyalty.
-            </p>
-          </div>
-          <div>
-            <h3 class="header">Detailed Sales Reporting and Analysis</h3>
-            <p class="text">
-              Access detailed sales reports and analytics to gain insights into
-              your business performance. Identify top-selling products, peak
-              sales periods, and customer preferences to make informed decisions
-              that enhance profitability.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="fill">
-      <div class="section__header">
-        <h2 class="title">Benefits of Kwik<span>Pos</span></h2>
         <p class="text">
-          Explore How Our Innovative Platform Transforms Retail Operations,
-          Streamlining Processes to Maximize Efficiency and Enhance Overall
-          Productivity.
+          Experience seamless transactions, real-time inventory tracking, and
+          comprehensive sales reports, all in one easy-to-use platform designed
+          to streamline your operations and boost efficiency
         </p>
-        <hr />
+        <div class="header__item">
+          <a href="about.html" class="btn">Learn More</a>
+          <a href="pricing.html" class="btn fill">Get Started</a>
+        </div>
       </div>
-      <div class="grid col_3">
-        <div class="col__card">
-          <div class="circle"></div>
-          <div class="col__card__content">
-            <div class="icon">
-              <i class="fa-solid fa-gauge-high ico"></i>
-            </div>
-            <h4 class="title">Faster Checkouts</h4>
+    </header>
 
-            <p class="text">
-              KwikPos automates tasks like tax, discounts, and receipts,
-              speeding up checkouts and keeping customers happy.
-            </p>
+    <!-- Features Container -->
+    <div class="container features">
+      <div class="features__header">
+        <div class="title">Our Features</div>
+        <p class="text">
+          Streamline your business operations with our advanced POS features.
+          From inventory management to customer engagement, our tools help you
+          optimize processes, enhance productivity, and deliver exceptional
+          service. Experience seamless transactions and real-time insights
+          tailored to your business needs, ensuring you stay ahead in today’s
+          competitive market.
+        </p>
+
+        <a href="" class="btn fill">Read more</a>
+      </div>
+      <div class="features__wrapper">
+        <div class="features__grid">
+          <div class="feature__grid">
+            <div class="feature__card">
+              <div class="feature__card__header">
+                <i class="fa-solid fa-clock feature__ico"></i>
+                <div class="title">Real-Time Inventory Management</div>
+              </div>
+              <div class="feature__card__text">
+                Effortlessly monitor stock levels with real-time updates,
+                ensuring optimal inventory management. Track sales, replenish
+                stock, and minimize overstock or stockouts to meet customer
+                demands effectively.
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__card__header">
+                <i class="fa-solid fa-credit-card feature__ico"></i>
+                <div class="title">Integrated Payment Processing</div>
+              </div>
+              <div class="feature__card__text">
+                Accept multiple payment methods like credit/debit cards, mobile
+                payments, and contactless transactions in one system for faster
+                checkouts and enhanced customer satisfaction.
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__card__header">
+                <i class="fa-solid fa-percent feature__ico"></i>
+                <div class="title">Customizable Sales Promotions</div>
+              </div>
+              <div class="feature__card__text">
+                Create and manage customized sales promotions—from discounts and
+                bundles to seasonal offers—to attract customers, boost sales,
+                and enhance customer satisfaction and loyalty.
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__card__header">
+                <i class="fa-solid fa-magnifying-glass-chart feature__ico"></i>
+                <div class="title">Sales Reporting and Analysis</div>
+              </div>
+              <div class="feature__card__text">
+                Access detailed sales reports and analytics to gain insights
+                into your business performance. Identify top-selling products,
+                peak sales periods, and customer preferences to make informed
+                decisions that enhance profitability.
+              </div>
+            </div>
+            <div class="feature__card">
+              <div class="feature__card__header">
+                <i class="fa-solid fa-people-arrows feature__ico"></i>
+                <div class="title">Employee Management</div>
+              </div>
+              <div class="feature__card__text">
+                Ensure comprehensive employee management by setting role-based
+                access to provide staff with the appropriate system permissions,
+                tracking individual sales performance and setting targets to
+                drive results, and closely monitoring working hours and
+                productivity to optimize workforce efficiency.
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__card__header">
+                <i class="fa-solid fa-shield-halved feature__ico"></i>
+                <div class="title">Security and Compliance</div>
+              </div>
+              <div class="feature__card__text">
+                Safeguard sensitive information with robust encryption
+                protocols, ensure adherence to industry standards and regulatory
+                compliance, and enhance security by tracking and auditing user
+                activity through detailed logs.
+              </div>
+            </div>
           </div>
         </div>
+        <div class="features__images">
+          <img
+            src="assets/images/feature/feature__img_01.jpg"
+            alt=""
+            class="feature__img"
+          />
+          <img
+            src="assets/images/feature/feature__img_02.jpg"
+            alt=""
+            class="feature__img"
+          />
+        </div>
+      </div>
+    </div>
 
-        <div class="col__card">
-          <div class="circle"></div>
-          <div class="col__card__content">
-            <div class="icon">
-              <i class="fa-solid fa-boxes-stacked ico"></i>
-            </div>
-            <h4 class="title">Inventory Management</h4>
-
+    <!-- Services Container -->
+    <div class="container services">
+      <div class="services__header">
+        <div class="features__header">
+          <div class="title">Benefits of KwikPos</div>
+          <p class="text">
+            Explore how our innovative platform revolutionizes retail operations
+            by streamlining processes to maximize efficiency and boost overall
+            productivity. Our solutions integrate seamlessly to enhance every
+            aspect of your business, driving growth and operational excellence.
+          </p>
+        </div>
+      </div>
+      <div class="services">
+        <!-- Service 1  -->
+        <div class="service">
+          <div class="service__box"></div>
+          <div class="service__content">
+            <i class="fa-solid fa-boxes-stacked service__ico"></i>
+            <h2 class="title">Inventory Management</h2>
             <p class="text">
               Track inventory in real-time, prevent stockouts, and identify top
               sellers and slow movers with KwikPos.
@@ -226,14 +290,12 @@
           </div>
         </div>
 
-        <div class="col__card">
-          <div class="circle"></div>
-          <div class="col__card__content">
-            <div class="icon">
-              <i class="fa-solid fa-scroll ico"></i>
-            </div>
-            <h4 class="title">Powerful Data & Reporting</h4>
-
+        <!-- Service 2  -->
+        <div class="service">
+          <div class="service__box"></div>
+          <div class="service__content">
+            <i class="fa-solid fa-scroll service__ico"></i>
+            <h2 class="title">Powerful Data & Reporting</h2>
             <p class="text">
               Gain valuable insights into sales, inventory, and customer
               behavior with detailed reports generated by KwikPos.
@@ -241,60 +303,46 @@
           </div>
         </div>
 
-        <div class="col__card">
-          <div class="circle"></div>
-          <div class="col__card__content">
-            <div class="icon">
-              <i class="fa-solid fa-user-plus ico"></i>
-            </div>
-            <h4 class="title">Enhanced Customer Service</h4>
-
-            <p class="text">
-              Personalize experiences and offer targeted promotions by tracking
-              purchase history and preferences through your KwikPos.
-            </p>
-          </div>
-        </div>
-
-        <div class="col__card">
-          <div class="circle"></div>
-          <div class="col__card__content">
-            <div class="icon">
-              <i class="fa-solid fa-shield-halved ico"></i>
-            </div>
-            <h4 class="title">Increased Security</h4>
-
-            <p class="text">
-              Protect your business from fraud and theft with data encryption
-              and employee activity tracking features in KwikPos.
-            </p>
-          </div>
-        </div>
-
-        <div class="col__card">
-          <div class="circle"></div>
-          <div class="col__card__content">
-            <div class="icon">
-              <i class="fa-solid fa-arrow-up-right-dots ico"></i>
-            </div>
-            <h4 class="title">Scalable for Growth</h4>
-
+        <!-- Service 3  -->
+        <div class="service">
+          <div class="service__box"></div>
+          <div class="service__content">
+            <i class="fa-solid fa-arrow-up-right-dots service__ico"></i>
+            <h2 class="title">Scalable for Growth</h2>
             <p class="text">
               KwikPos adapts to your needs. Add features and functionality as
               your business grows without needing a whole new system.
             </p>
           </div>
         </div>
+
+        <!-- Service 4  -->
+        <div class="service">
+          <div class="service__box"></div>
+          <div class="service__content">
+            <i class="fa-solid fa-gauge-high service__ico"></i>
+            <h2 class="title">Faster Checkouts</h2>
+            <p class="text">
+              KwikPos automates tasks like tax, discounts, and receipts,
+              speeding up checkouts and keeping customers happy.
+            </p>
+          </div>
+        </div>
       </div>
-    </section>
-    <div class="support__wrapper">
-      <img src="assets/images/point__of__sale.jpg" alt="Retail Image" />
-      <div class="support__container">
+    </div>
+
+    <!-- Support -->
+    <div class="container support">
+      <div class="support__image">
+        <img src="assets/images/support/support__img__01.jpg" alt="" />
+      </div>
+      <div class="support__image">
+        <img src="assets/images/support/support__img__02.jpg" alt="" />
+      </div>
+      <div class="support__wrapper">
+        <div class="support__box"></div>
         <div class="support__content">
-          <h3 class="title">
-            Your Comprehensive Resource Hub for Kwik<span>Pos</span> Support and
-            Information.
-          </h3>
+          <h2 class="title">KwikPos Support and Information</h2>
           <p class="text">
             Get the most out of KwikPos Our dedicated support center is here to
             help you with any questions, issues, or troubleshooting needs you
@@ -302,204 +350,125 @@
             our team of experts is available to assist you and ensure you're
             maximizing the efficiency and functionality of KwikPos.
           </p>
-
-          <a href="contact.html" class="btn fill">Contact Us</a>
+          <a href="contact.html" class="btn">Contact Us</a>
         </div>
       </div>
     </div>
-    <section>
-      <div class="grid col_1_2">
-        <div class="col__item title__section">
-          <h2 class="title">Frequently Asked Questions About KwikPos.</h2>
+
+    <!-- Accreditation  -->
+    <div class="container accordion">
+      <div class="accordion__wrapper">
+        <div class="features__header">
+          <div class="title">Frequently Asked Questions About KwikPos.</div>
           <p class="text">
             Get answers to your questions about Poseidon. The FAQs cover
             everything you need to know to make the most of of our platform.
           </p>
         </div>
-
-        <div class="col__item col_2">
-          <div class="accordion__wrapper">
-            <div class="accordion__item">
-              <div class="accordion__content">
-                <div class="accordion__header">
-                  <span>What is this?</span>
-                  <div class="icon__Wrapper">
-                    <i class="fa-solid fa-plus ico ico_plus"></i>
-                    <i class="fa-solid fa-minus ico ico_minus"></i>
-                  </div>
-                </div>
-                <div class="accordion__panel">
-                  KwikPOS is a comprehensive Point of Sale (POS) solution
-                  designed to streamline sales transactions, inventory
-                  management, and customer interactions for businesses of all
-                  sizes.
-                </div>
-              </div>
+        <div class="accordion__container">
+          <!-- Question 1  -->
+          <div class="accordion__panel active">
+            <div class="acc__title">What is this?</div>
+            <div class="acc__text">
+              KwikPOS is a comprehensive Point of Sale (POS) solution designed
+              to streamline sales transactions, inventory management, and
+              customer interactions for businesses of all sizes.
             </div>
+          </div>
 
-            <div class="accordion__item">
-              <div class="accordion__content">
-                <div class="accordion__header">
-                  <span>Who can use KwikPOS?</span>
-                  <div class="icon__Wrapper">
-                    <i class="fa-solid fa-plus ico ico_plus"></i>
-                    <i class="fa-solid fa-minus ico ico_minus"></i>
-                  </div>
-                </div>
-                <div class="accordion__panel">
-                  KwikPOS is suitable for a variety of businesses, including
-                  retail stores, restaurants, cafes, and service-based
-                  businesses.
-                </div>
-              </div>
+          <!-- Question 2 -->
+          <div class="accordion__panel">
+            <div class="acc__title">Who can use KwikPOS?</div>
+            <div class="acc__text">
+              KwikPOS is suitable for a variety of businesses, including retail
+              stores, restaurants, cafes, and service-based businesses.
             </div>
+          </div>
 
-            <div class="accordion__item">
-              <div class="accordion__content">
-                <div class="accordion__header">
-                  <span>How does KwikPOS help my business?</span>
-                  <div class="icon__Wrapper">
-                    <i class="fa-solid fa-plus ico ico_plus"></i>
-                    <i class="fa-solid fa-minus ico ico_minus"></i>
-                  </div>
-                </div>
-                <div class="accordion__panel">
-                  KwikPOS helps your business by providing an efficient and
-                  easy-to-use system for managing sales, tracking inventory,
-                  generating reports, and enhancing customer experience.
-                </div>
-              </div>
+          <!-- Question 3 -->
+          <div class="accordion__panel">
+            <div class="acc__title">How does KwikPOS help my business?</div>
+            <div class="acc__text">
+              KwikPOS helps your business by providing an efficient and
+              easy-to-use system for managing sales, tracking inventory,
+              generating reports, and enhancing customer experience.
             </div>
+          </div>
 
-            <div class="accordion__item">
-              <div class="accordion__content">
-                <div class="accordion__header">
-                  <span>What features does KwikPOS offer?</span>
-                  <div class="icon__Wrapper">
-                    <i class="fa-solid fa-plus ico ico_plus"></i>
-                    <i class="fa-solid fa-minus ico ico_minus"></i>
-                  </div>
-                </div>
-                <div class="accordion__panel">
-                  <div>
-                    KwikPOS offers features such as sales tracking, inventory
-                    management, customer management, reporting and analytics,
-                    employee management, and integration with various payment
-                    methods.
-                  </div>
-                </div>
-              </div>
+          <!-- Question 4 -->
+          <div class="accordion__panel">
+            <div class="acc__title">What features does KwikPOS offer?</div>
+            <div class="acc__text">
+              KwikPOS offers features such as sales tracking, inventory
+              management, customer management, reporting and analytics, employee
+              management, and integration with various payment methods.
             </div>
+          </div>
 
-            <div class="accordion__item">
-              <div class="accordion__content">
-                <div class="accordion__header">
-                  <span>What are the pricing plans for KwikPOS?</span>
-                  <div class="icon__Wrapper">
-                    <i class="fa-solid fa-plus ico ico_plus"></i>
-                    <i class="fa-solid fa-minus ico ico_minus"></i>
-                  </div>
-                </div>
-                <div class="accordion__panel">
-                  <div>
-                    KwikPOS offers various pricing plans to suit different
-                    business needs. For detailed information on our pricing
-                    plans, please visit our pricing page or contact our sales
-                    team.
-                  </div>
+          <!-- Question 5 -->
+          <div class="accordion__panel">
+            <div class="acc__title">
+              What are the pricing plans for KwikPOS?
+            </div>
+            <div class="acc__text">
+              KwikPOS offers various pricing plans to suit different business
+              needs. For detailed information on our pricing plans, please visit
+              our pricing page or contact our sales team. <br /><br />
 
-                  <a href="pricing.html" class="btn fill">View Pricing</a>
-                </div>
-              </div>
+              <a href="pricing.html" class="btn">Pricing</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="fill__Shade">
-      <div class="section__header">
-        <h2 class="title">Ready to transform your <span>store?</span></h2>
+    </div>
+
+    <!-- Trail -->
+    <div class="container trail">
+      <div class="features__header">
+        <div class="title">Ready to transform your store?</div>
         <p class="text">
           Sign up now for KwikPos' free trial and streamline your POS
           operations. Optimize transactions, manage inventory, and enhance
           customer interactions effortlessly.
         </p>
 
-        <a href="pricing.html" class="btn fill">Sign Up for a Free Trail</a>
+        <a href="pricing.html" class="btn fill"> Sign Up for a Free Trail </a>
       </div>
-    </section>
+    </div>
+
+    <!-- Footer -->
     <footer>
-      <div class="footer__wrapper">
-        <div class="footer__container">
-          <div class="footer__item">
-            <a href="#">
-              <div class="navbar__brand">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 -960 960 960"
-                  width="24px"
-                  fill="#e8eaed"
-                >
-                  <path
-                    d="M280-640q-33 0-56.5-23.5T200-720v-80q0-33 23.5-56.5T280-880h400q33 0 56.5 23.5T760-800v80q0 33-23.5 56.5T680-640H280Zm0-80h400v-80H280v80ZM160-80q-33 0-56.5-23.5T80-160v-40h800v40q0 33-23.5 56.5T800-80H160ZM80-240l139-313q10-22 30-34.5t43-12.5h376q23 0 43 12.5t30 34.5l139 313H80Zm260-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm120 160h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm120 160h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Zm0-80h40q8 0 14-6t6-14q0-8-6-14t-14-6h-40q-8 0-14 6t-6 14q0 8 6 14t14 6Z"
-                  />
-                </svg>
-                <div>Kwik<span>Pos</span></div>
-              </div>
-            </a>
-            <p>
-              Empower your business with KwikPos POS Platform. Streamline sales,
-              manage inventory, and focus on your customers effortlessly.
-            </p>
-          </div>
-          <div class="footer__item">
-            <div class="item">
-              <div class="title">Quick Links</div>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-            <div class="item">
-              <div class="title">Join Our Newsletter</div>
-              <p>
-                Discover our powerful POS tool! Join our newsletter for updates.
-                Sign up now!
-              </p>
-              <form action="#">
-                <input type="text" placeholder="email@example.com" />
-                <a href="#" class="btn fill">Subscribe</a>
-              </form>
-              <ul class="socials">
-                <li>
-                  <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa-brands fa-square-x-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa-brands fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          Copyright @ 2024 KwikPos. All rights reserved.
-          <a href="Terms&Privacy.html">
-            <span>Terms & Privacy policy.</span>
-          </a>
-        </div>
+      <div class="footer__brand">
+        <a href="index.html" class="brand">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3.433 17.325 3.079 19.8a1 1 0 0 0 1.131 1.131l2.475-.354C7.06 20.524 8 18 8 18s.472.405.665.466c.412.13.813-.274.948-.684L10 16.01s.577.292.786.335c.266.055.524-.109.707-.293a.988.988 0 0 0 .241-.391L12 14.01s.675.187.906.214c.263.03.519-.104.707-.293l1.138-1.137a5.502 5.502 0 0 0 5.581-1.338 5.507 5.507 0 0 0 0-7.778 5.507 5.507 0 0 0-7.778 0 5.5 5.5 0 0 0-1.338 5.581l-7.501 7.5a.994.994 0 0 0-.282.566zM18.504 5.506a2.919 2.919 0 0 1 0 4.122l-4.122-4.122a2.919 2.919 0 0 1 4.122 0z"
+            ></path>
+          </svg>
+          <span>KwikPos</span>
+        </a>
+
+        <p class="text">
+          Empower your business with KwikPos POS Platform. Streamline sales,
+          manage inventory, and focus on your customers effortlessly.
+        </p>
+
+        <ul class="mobile__nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__copyright">
+        <a href="#">Copyright @ 2024 Lorem. All rights reserved.</a>
+        <a href="terms.html">Terms & Privacy policy.</a>
       </div>
     </footer>
   </body>
