@@ -28,6 +28,7 @@
 body {
   position: relative;
   font-family: Font;
+  overflow-x: none;
 }
 
 /* Header */
